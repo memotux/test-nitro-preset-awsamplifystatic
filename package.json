@@ -3,9 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "AWS_APP_ID='12345678' nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "AWS_APP_ID='12345678' nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
