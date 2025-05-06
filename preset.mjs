@@ -26,18 +26,18 @@ const awsAmplify = defineNitroPreset(
 )
 const awsAmplifyStatic = defineNitroPreset(
   {
-    extends: 'aws-amplify',
-    static: true,
-    prerender: {
-      crawlLinks: true,
-    },
-    serveStatic: false,
+    extends: 'static',
     output: {
       dir: '{{ rootDir }}/.amplify-hosting',
       publicDir: '{{ output.dir }}/static{{ baseURL }}',
     },
     commands: {
       preview: 'npx serve ./static',
+    },
+    hooks: {
+      async compiled(nitro) {
+        await writeAmplifyFiles(nitro)
+      },
     },
   },
   {
