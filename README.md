@@ -47,7 +47,7 @@ With "Git-base deployments" you use Amplify "compute layer" to build your projec
 
 ### The `nuxt generate` Issue
 
-Manual deployments and Git-base deployment with `nuxt build` work as spected. But Gib-base deployment with `nuxt generate` have as Issue.
+Manual deployments and Git-base deployment with `nuxt build` work as spected. But Gib-base deployment with `nuxt generate` have an Issue.
 
 When `nuxt generate` is executed on a Amplify Git-base project, the preset is autodetected and set to `aws-amplify`. The current preset will not `crawlLinks`, resulting in a non-working static folder, when the expected result it is the same files and structure as when you execute `nuxt generate` in local environment.
 
